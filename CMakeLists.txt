@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.20.2...3.24)
 project(ScalapackExamples LANGUAGES Fortran)
 
 if(NOT DEFINED ENV{MKLROOT})
-  message(WARNING "MKL not detected via MKLROOT environment variable")
+  message(FATAL_ERROR "MKL not detected via MKLROOT environment variable")
 endif()
 
 cmake_path(CONVERT "$ENV{MKLROOT}" TO_CMAKE_PATH_LIST MKLROOT NORMALIZE)
