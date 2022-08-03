@@ -6,7 +6,7 @@ if(NOT DEFINED ENV{MKLROOT})
   message(WARNING "MKL not detected via MKLROOT environment variable")
 endif()
 
-cmake_path(CONVERT $ENV{MKLROOT} TO_CMAKE_PATH_LIST MKLROOT NORMALIZE)
+cmake_path(CONVERT "$ENV{MKLROOT}" TO_CMAKE_PATH_LIST MKLROOT NORMALIZE)
 
 message(STATUS "MKLROOT: ${MKLROOT}")
 
